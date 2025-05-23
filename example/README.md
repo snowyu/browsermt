@@ -9,4 +9,7 @@ cp -rf firefox-translations-models/registry.json models
 cp -rf firefox-translations-models/models/prod/* models
 cp -rf firefox-translations-models/models/dev/* models
 gunzip models/*/*
+ln -s ../artifacts
+ln -s ../build
+http-server .
 ```
