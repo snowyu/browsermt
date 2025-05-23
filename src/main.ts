@@ -36,13 +36,13 @@ async function main() {
     "../../../artifacts/bergamot-translator-worker.wasm"
   );
 
-  const MODEL_REGISTRY = "../../example/src/models/registry.json";
+  const MODEL_REGISTRY = "/models/registry.json";
   const response = await fetch(MODEL_REGISTRY);
   const modelRegistry: ModelRegistry = await response.json();
   // Model Registry only has names, not paths. So we need to add the path to each entry.
   for (const [name, model] of Object.entries(modelRegistry)) {
     for (const file of Object.values(model)) {
-      file.name = `../../example/src/models/${name}/${file.name}`;
+      file.name = `/models/${name}/${file.name}`;
     }
   }
 
