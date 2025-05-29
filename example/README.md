@@ -7,7 +7,6 @@ git clone --depth 1 --branch main --single-branch https://github.com/mozilla/fir
 mkdir models
 cp -rf firefox-translations-models/registry.json models
 cp -rf firefox-translations-models/models/prod/* models
-cp -rf firefox-translations-models/models/dev/* models
 gunzip models/*/*
 ln -s ../artifacts
 ln -s ../build
