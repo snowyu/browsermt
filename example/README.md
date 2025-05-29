@@ -3,6 +3,10 @@
 To get models for the example, run:
 
 ```bash
+cd browsermt
+npm i
+npm run build
+cd example
 git clone --depth 1 --branch main --single-branch https://github.com/mozilla/firefox-translations-models/
 mkdir models
 cp -rf firefox-translations-models/registry.json models
